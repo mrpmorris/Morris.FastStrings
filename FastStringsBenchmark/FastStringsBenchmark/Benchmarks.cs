@@ -22,6 +22,7 @@ public class Benchmarks
 			.Where(x => x != "FirstWord")
 			.Where(x => x != "LastWord")
 			.Where(x => x != "稀有词")
+			.Where(x => x != "ਇੱਕਦੁਰਲੱਭਵਾਕਾਂਸ਼ਜੋਟੈਕਸਟਦੇਅੰਤਦੇਨੇੜੇਇੱਕਵਾਰਦਿਖਾਈਦਿੰਦਾਹੈ")
 			.GroupBy(x => x);
 
 		LeastCommonSearchWords = groupedWords
@@ -52,13 +53,13 @@ public class Benchmarks
 	[Benchmark]
 	public void IndexOfRareSentenceNearEndOfText()
 	{
-		WarAndPeace.IndexOf("ਇੱਕ ਦੁਰਲੱਭ ਵਾਕਾਂਸ਼ ਜੋ ਟੈਕਸਟ ਦੇ ਅੰਤ ਦੇ ਨੇੜੇ ਇੱਕ ਵਾਰ ਦਿਖਾਈ ਦਿੰਦਾ ਹੈ");
+		WarAndPeace.IndexOf("ਇੱਕਦੁਰਲੱਭਵਾਕਾਂਸ਼ਜੋਟੈਕਸਟਦੇਅੰਤਦੇਨੇੜੇਇੱਕਵਾਰਦਿਖਾਈਦਿੰਦਾਹੈ");
 	}
 
 	[Benchmark]
 	public void FastIndexOfRareSentenceNearEndOfText()
 	{
-		WarAndPeace.FastIndexOf("ਇੱਕ ਦੁਰਲੱਭ ਵਾਕਾਂਸ਼ ਜੋ ਟੈਕਸਟ ਦੇ ਅੰਤ ਦੇ ਨੇੜੇ ਇੱਕ ਵਾਰ ਦਿਖਾਈ ਦਿੰਦਾ ਹੈ");
+		WarAndPeace.FastIndexOf("ਇੱਕਦੁਰਲੱਭਵਾਕਾਂਸ਼ਜੋਟੈਕਸਟਦੇਅੰਤਦੇਨੇੜੇਇੱਕਵਾਰਦਿਖਾਈਦਿੰਦਾਹੈ");
 	}
 
 	[Benchmark]
