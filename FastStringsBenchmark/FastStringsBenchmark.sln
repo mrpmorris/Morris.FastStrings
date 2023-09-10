@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34004.107
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastStringsBenchmark", "FastStringsBenchmark\FastStringsBenchmark.csproj", "{80034199-75C0-448A-A43A-D93283FA4C54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Morris.FastStrings", "..\Morris.FastStrings\ClassLibrary1\Morris.FastStrings.csproj", "{D9D73F84-88E1-458F-A82F-D58F145141EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80034199-75C0-448A-A43A-D93283FA4C54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80034199-75C0-448A-A43A-D93283FA4C54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80034199-75C0-448A-A43A-D93283FA4C54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80034199-75C0-448A-A43A-D93283FA4C54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9D73F84-88E1-458F-A82F-D58F145141EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9D73F84-88E1-458F-A82F-D58F145141EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9D73F84-88E1-458F-A82F-D58F145141EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9D73F84-88E1-458F-A82F-D58F145141EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30BBFCF7-3E0C-4611-88AD-C43E3528820C}
+	EndGlobalSection
+EndGlobal
