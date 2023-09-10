@@ -8,6 +8,7 @@ namespace FastStringsBenchmark;
 [MemoryDiagnoser]
 public class Benchmarks
 {
+	private const StringComparison Comparison = StringComparison.CurrentCultureIgnoreCase;
 	public static readonly ImmutableArray<string> LeastCommonSearchWords;
 	public static readonly ImmutableArray<string> MostCommonSearchWords;
 	public static readonly string WarAndPeace = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxHello";
@@ -41,76 +42,76 @@ public class Benchmarks
 	[Benchmark]
 	public void IndexOfRareWordNearEndOfText()
 	{
-		WarAndPeace.IndexOf("稀有词");
+		WarAndPeace.IndexOf("稀有词", Comparison);
 	}
 
 	[Benchmark]
 	public void FastIndexOfRareWordNearEndOfText()
 	{
-		WarAndPeace.FastIndexOf("稀有词");
+		WarAndPeace.FastIndexOf("稀有词", Comparison);
 	}
 
 	[Benchmark]
 	public void IndexOfRareSentenceNearEndOfText()
 	{
-		WarAndPeace.IndexOf("ਇੱਕਦੁਰਲੱਭਵਾਕਾਂਸ਼ਜੋਟੈਕਸਟਦੇਅੰਤਦੇਨੇੜੇਇੱਕਵਾਰਦਿਖਾਈਦਿੰਦਾਹੈ");
+		WarAndPeace.IndexOf("ਇੱਕਦੁਰਲੱਭਵਾਕਾਂਸ਼ਜੋਟੈਕਸਟਦੇਅੰਤਦੇਨੇੜੇਇੱਕਵਾਰਦਿਖਾਈਦਿੰਦਾਹੈ", Comparison);
 	}
 
 	[Benchmark]
 	public void FastIndexOfRareSentenceNearEndOfText()
 	{
-		WarAndPeace.FastIndexOf("ਇੱਕਦੁਰਲੱਭਵਾਕਾਂਸ਼ਜੋਟੈਕਸਟਦੇਅੰਤਦੇਨੇੜੇਇੱਕਵਾਰਦਿਖਾਈਦਿੰਦਾਹੈ");
+		WarAndPeace.FastIndexOf("ਇੱਕਦੁਰਲੱਭਵਾਕਾਂਸ਼ਜੋਟੈਕਸਟਦੇਅੰਤਦੇਨੇੜੇਇੱਕਵਾਰਦਿਖਾਈਦਿੰਦਾਹੈ", Comparison);
 	}
 
 	[Benchmark]
 	public void IndexOfFirstWord()
 	{
-		WarAndPeace.IndexOf("FirstWord");
+		WarAndPeace.IndexOf("FirstWord", Comparison);
 	}
 
 	[Benchmark]
 	public void FastIndexOfFirstWord()
 	{
-		WarAndPeace.FastIndexOf("FirstWord");
+		WarAndPeace.FastIndexOf("FirstWord", Comparison);
 	}
 
 	[Benchmark]
 	public void IndexOfLastWord()
 	{
-		WarAndPeace.IndexOf("LastWord");
+		WarAndPeace.IndexOf("LastWord", Comparison);
 	}
 
 	[Benchmark]
 	public void FastIndexOfLastWord()
 	{
-		WarAndPeace.FastIndexOf("LastWord");
+		WarAndPeace.FastIndexOf("LastWord", Comparison);
 	}
 
 	[Benchmark]
 	public void IndexOf10LeastCommonWords()
 	{
 		foreach (string searchWord in LeastCommonSearchWords)
-			WarAndPeace.IndexOf(searchWord);
+			WarAndPeace.IndexOf(searchWord, Comparison);
 	}
 
 	[Benchmark]
 	public void FastIndexOf10LeastCommonWords()
 	{
 		foreach (string searchWord in LeastCommonSearchWords)
-			WarAndPeace.FastIndexOf(searchWord);
+			WarAndPeace.FastIndexOf(searchWord, Comparison);
 	}
 
 	[Benchmark]
 	public void IndexOf10MostCommonWords()
 	{
 		foreach (string searchWord in MostCommonSearchWords)
-			WarAndPeace.IndexOf(searchWord);
+			WarAndPeace.IndexOf(searchWord, Comparison);
 	}
 
 	[Benchmark]
 	public void FastIndexOf10MostCommonWords()
 	{
 		foreach (string searchWord in MostCommonSearchWords)
-			WarAndPeace.FastIndexOf(searchWord);
+			WarAndPeace.FastIndexOf(searchWord, Comparison);
 	}
 }
